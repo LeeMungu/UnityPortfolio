@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject m_target;
     [SerializeField] float m_speed = 5f;
+    float m_rotateSpeed = 5f;
     public GameObject target { get { return m_target; } }
 
     private void Awake()
@@ -37,6 +38,23 @@ public class PlayerController : MonoBehaviour
             finalDir.y = 0f;
             Move(finalDir);
 
+            Vector3 direction = Camera.main.transform.forward;
+            direction.y = 0f;
+            transform.LookAt(transform.position + direction * 2f);
+            
+            //플레이어 회전
+            //Quaternion targetRotation = Quaternion.Euler(
+            //new Vector3(0, Camera.main.transform.rotation.y,0).normalized);
+            //transform.rotation = Quaternion.Euler( new Vector3(0, Camera.main.transform.rotation.y, 0));// Quaternion.Lerp(transform.rotation, targetRotation, m_rotateSpeed * Time.deltaTime);
+            //Quaternion quat = transform.rotation;
+            //quat.y = Camera.main.transform.rotation.y;
+            //transform.rotation = quat;
+            //Debug.Log(targetRotation);
+
+            //Vector3 rotation = transform.eulerAngles;
+            //rotation.y = Camera.main.transform.eulerAngles.y;
+            //transform.eulerAngles = rotation;
+
             //애니메이션 - 각각 플레이어에서 처리하게 한다.
             //m_animator.SetFloat(m_animeHashKeyLeftRight, finalDir.x);
             //m_animator.SetFloat(m_animeHashKeyBackFront, finalDir.z);
@@ -45,7 +63,7 @@ public class PlayerController : MonoBehaviour
     void OnEventStickUp()
     {
         //z축 초기화-후에 부드럽게 바꿔볼것
-        transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0f);
+        //transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0f);
 
         //각각 플레이어에서 처리하게 한다.
         //m_animator.SetFloat(m_animeHashKeyBackFront, 0f);

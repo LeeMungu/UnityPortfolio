@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class FollowCamera : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class FollowCamera : MonoBehaviour
     [SerializeField] float m_targetHeight = 2f; //따라갈 목표점 높이
     [SerializeField] float m_targetEulerAngleY = 0f;    //타겟 중심으로 회전할 회전값
     [SerializeField] float m_rotateSpeed = 5f;  //회전 스피드
+    public float targetEnlerAngleY { get { return m_targetEulerAngleY; } set { m_targetEulerAngleY = value; } }
 
     public Vector3 offset = new Vector3(0f, 0f, 0f);
 
@@ -17,6 +19,7 @@ public class FollowCamera : MonoBehaviour
     {
         m_target = GameManager.instace.FindObject("PlayerController").GetComponent<PlayerController>().target.transform;
 
+        //카메라 회전
         //if (Input.GetKey("q"))
         //{
         //    // rotate toward left Yaxis
@@ -38,10 +41,15 @@ public class FollowCamera : MonoBehaviour
         //// 줌 최소 및 최대 설정 
         //currentZoom = Mathf.Clamp(currentZoom, minZoom, maxZoom);
 
-
+        //=================================================================================
+        
     }
-    //Update가 끝나고 실행되는게 LateUpdate
-    private void LateUpdate()
+    
+
+
+
+        //Update가 끝나고 실행되는게 LateUpdate
+        private void LateUpdate()
     {
         //플레이어 따라가는 카메라
         //==============================================================

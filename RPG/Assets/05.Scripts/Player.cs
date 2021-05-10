@@ -113,7 +113,6 @@ public class Player : MonoBehaviour
             //transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, m_rotateSpeed * Time.deltaTime);
             //Debug.Log("targetRotation :     " + targetRotation);
             //Debug.Log("transform.rotation : " + transform.localRotation);
-
             finalDir.y = 0f;
             //이동은 컨트롤러에서 해준다.
             //Move(finalDir);
@@ -199,7 +198,6 @@ public class Player : MonoBehaviour
         if (m_isDamege)
         {
             m_isDamege = false;
-            m_animator.SetBool(m_animeHashKeyIsDamege, m_isDamege);
         }
         //활성화
         for (int i = 0; i < m_weapons.Length; ++i)
@@ -233,8 +231,8 @@ public class Player : MonoBehaviour
         if (m_isDamege == false)
         {
             m_playerInfo.Hp -= attackDamege;
-            m_isDamege = true;
-            m_animator.SetBool(m_animeHashKeyIsDamege, m_isDamege);
+            m_animator.SetTrigger(m_animeHashKeyIsDamege);
+            UIManager.instace.GeneratDamageText(transform, attackDamege, false);
         }
         if (m_playerInfo.Hp < 0)
         {

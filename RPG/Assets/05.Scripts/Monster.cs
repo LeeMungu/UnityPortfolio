@@ -40,7 +40,7 @@ public class Monster : MonoBehaviour
     private void Update()
     {
         float distance = Vector3.Distance(transform.position, m_playerController.transform.position);
-        Debug.Log("몬스터와의 거리 : "+distance);
+        //Debug.Log("몬스터와의 거리 : "+distance);
         if (distance < 2)
         {
             ChangeState(State.Attack);
@@ -90,6 +90,7 @@ public class Monster : MonoBehaviour
             m_hp -= damege;
             m_isDamage = true;
             m_animator.SetBool(m_animeHashKeyIsDamage, m_isDamage);
+            UIManager.instace.GeneratDamageText(transform, damege, true);
         }
         if(m_hp<0)
         {

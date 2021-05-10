@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     //GameObject[] 
+    [SerializeField] GameObject m_damageText;
     static UIManager s_instance = null;
     public static UIManager instace { get { return s_instance; } }
     private Dictionary<string, GameObject> m_UIList = new Dictionary<string, GameObject>();
@@ -26,6 +27,7 @@ public class UIManager : MonoBehaviour
         AddList("CharPopup");
         AddList("UICamera");
         AddList("State");
+        AddList("Canvas");
     }
     private void Start()
     {
@@ -69,8 +71,9 @@ public class UIManager : MonoBehaviour
         return m_UIList[temp];
     }
 
-    void SetPlayerInfo()
+    public void GeneratDamageText(Transform position,int damage, bool isEnermy)
     {
-        //m_playerInfos += { }
+        Instantiate(m_damageText,FindObjcet("Canvas").transform);
+        m_damageText.GetComponent<DamageTextSkript>().DamageSet(damage,isEnermy);
     }
 }
