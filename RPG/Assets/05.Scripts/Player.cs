@@ -86,11 +86,11 @@ public class Player : MonoBehaviour
     //    //}
     //}
 
-    private void OnDestroy()
-    {
-        GameObject.Find("PanelJoystick").GetComponent<PanelJoystick>().EventStickMove -= OnEventStictMove;
-        GameObject.Find("PanelJoystick").GetComponent<PanelJoystick>().EventStickUp -= OnEventStickUp;
-    }
+    //private void OnDestroy()
+    //{
+    //    GameObject.Find("PanelJoystick").GetComponent<PanelJoystick>().EventStickMove -= OnEventStictMove;
+    //    GameObject.Find("PanelJoystick").GetComponent<PanelJoystick>().EventStickUp -= OnEventStickUp;
+    //}
     //조이스틱 관련조작
     void OnEventStictMove(Vector3 dir)
     {
