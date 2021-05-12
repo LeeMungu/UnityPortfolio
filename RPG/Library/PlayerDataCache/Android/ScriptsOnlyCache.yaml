@@ -27,8 +27,12 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateMachineInspector
+    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -84,61 +88,61 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11562}
+      Script: {instanceID: 11564}
     - Class: 114
-      Script: {instanceID: 11584}
+      Script: {instanceID: 11586}
     - Class: 114
-      Script: {instanceID: 11610}
+      Script: {instanceID: 11612}
     - Class: 114
-      Script: {instanceID: 11712}
+      Script: {instanceID: 11714}
     - Class: 114
-      Script: {instanceID: 11848}
+      Script: {instanceID: 11850}
     - Class: 114
-      Script: {instanceID: 12102}
+      Script: {instanceID: 12100}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12278}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 12312}
     - Class: 114
-      Script: {instanceID: 12332}
+      Script: {instanceID: 12330}
     - Class: 114
-      Script: {instanceID: 12376}
+      Script: {instanceID: 12374}
     - Class: 114
-      Script: {instanceID: 12744}
+      Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 12794}
+      Script: {instanceID: 12786}
     - Class: 114
-      Script: {instanceID: 12820}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 12888}
+      Script: {instanceID: 12880}
     - Class: 114
-      Script: {instanceID: 12900}
+      Script: {instanceID: 12892}
     - Class: 114
-      Script: {instanceID: 12932}
+      Script: {instanceID: 12924}
     - Class: 114
-      Script: {instanceID: 13014}
+      Script: {instanceID: 13004}
     - Class: 114
-      Script: {instanceID: 13040}
+      Script: {instanceID: 13030}
     - Class: 114
-      Script: {instanceID: 13112}
+      Script: {instanceID: 13102}
     - Class: 114
-      Script: {instanceID: 13152}
+      Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 13274}
+      Script: {instanceID: 13264}
     - Class: 114
-      Script: {instanceID: 13430}
+      Script: {instanceID: 13414}
     - Class: 114
-      Script: {instanceID: 13546}
+      Script: {instanceID: 13528}
     - Class: 114
-      Script: {instanceID: 13740}
+      Script: {instanceID: 13718}
     - Class: 114
-      Script: {instanceID: 13852}
+      Script: {instanceID: 13830}
     - Class: 114
-      Script: {instanceID: 13914}
+      Script: {instanceID: 13892}
     - Class: 114
-      Script: {instanceID: 13960}
+      Script: {instanceID: 13938}
     - Class: 114
-      Script: {instanceID: 13986}
+      Script: {instanceID: 13964}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1329,4 +1333,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/01.Scenes/Scene1.unity
-  playerPath: C:/Users/pc/Desktop/rpg.apk
+  playerPath: C:/Users/pc/Documents/GitHub/UnityPortfolio/rpg.apk
